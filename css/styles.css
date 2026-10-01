@@ -1,0 +1,360 @@
+:root {
+   
+    --blanco: #FFFFFF;
+    --azul: #c28e54;       
+    --azulFuerte: #8c5826; 
+    --negro: #130c0c;
+    --gris: #e6dfdb;
+    --azulClaro: #d9b89a;  
+    --grisOscuro: #38373790;
+
+
+    --fuentePrincipal: "Work Sans", sans-serif;
+
+
+    --tamañoFuente: 3.3rem;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--fuentePrincipal);
+    font-weight: 400;
+    background-image: linear-gradient(to top, var(--azulClaro) 0%, var(--gris) 100%);
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+.sombra {
+    -webkit-box-shadow: 10px 17px 11px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 17px 11px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 17px 11px -4px rgba(10, 4, 4, 0.75);
+    border-radius: 2rem;
+    background-image: linear-gradient(to top, var(--gris) 0%, var(--blanco) 70%);
+    padding: 2rem;
+}
+
+.titulo {
+    font-size: var(--tamañoFuente);
+    height: 5rem;
+}
+
+.titulo span {
+    font-size: 2rem;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 3.8rem;
+    color: var(--blanco);
+    padding-bottom: 10rem;
+    padding-top: 15rem;
+}
+
+.place {
+    font-weight: 600;
+    color: var(--negro);
+}
+
+.boton {
+    background-color: var(--azul);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    width: 80%;
+    text-align: center;
+    border: none;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
+}
+
+.nav-bg {
+    background-color: var(--azul);
+    position: relative;
+    z-index: 10;
+}
+
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 480px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .boton {
+        width: auto;
+    }
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: var(--azulFuerte);
+}
+
+.navegacion-principal a {
+    padding: 1rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--azulFuerte);
+    color: var(--blanco);
+}
+
+.hero {
+    background-image: linear-gradient(rgb(0 0 0 / 30%), rgb(0 0 0 / 30%)), url('https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1200&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50rem;
+    position: relative;
+    margin-bottom: 4rem;
+    overflow: hidden;
+}
+
+.contenido-hero {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 3rem;
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .icono {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--gris);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--grisOscuro);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.campo textarea {
+    height: 20rem;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.enviar .boton {
+    width: 100%;
+    color: var(--blanco);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* Separación general entre bloques y subtítulos */
+.titulo-seccion,
+.menu-velas-bloque h2,
+.aromas-costos-bloque h2 {
+    margin-bottom: 1rem;
+    color: var(--negro);
+}
+
+.sub-descripcion {
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--grisOscuro);
+    margin-bottom: 3rem;
+}
+
+/* Estilos para el Menú de Velas (Carrusel / Desplazamiento Horizontal) */
+.menu-velas-bloque {
+    margin-top: 4rem;
+}
+
+.carrusel-velas {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding-bottom: 2rem;
+    scroll-snap-type: x mandatory;
+}
+
+/* Estilo para las barras de desplazamiento del carrusel */
+.carrusel-velas::-webkit-scrollbar {
+    height: 8px;
+}
+.carrusel-velas::-webkit-scrollbar-track {
+    background: var(--gris);
+    border-radius: 4px;
+}
+.carrusel-velas::-webkit-scrollbar-thumb {
+    background: var(--azul);
+    border-radius: 4px;
+}
+
+.tarjeta-vela {
+    background-color: var(--blanco);
+    border-radius: 1rem;
+    min-width: 28rem;
+    flex: 0 0 auto;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+}
+
+.tarjeta-vela img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.tarjeta-vela h3 {
+    font-size: 1.8rem;
+    color: var(--negro);
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta-vela p {
+    font-size: 1.4rem;
+    color: var(--grisOscuro);
+}
+
+/* Estilos para la sección de Tipos de Aromas y Costos (Tabla elegante) */
+.aromas-costos-bloque {
+    margin-top: 4rem;
+}
+
+.tabla-aromas-contenedor {
+    overflow-x: auto;
+}
+
+.tabla-precios {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--blanco);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-precios th,
+.tabla-precios td {
+    padding: 1.5rem;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.tabla-precios th {
+    background-color: var(--azul);
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+.tabla-precios tr:nth-child(even) {
+    background-color: #f9f6f3;
+}
+
+.tabla-precios tr:hover {
+    background-color: #f1eae4;
+}
